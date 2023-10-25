@@ -1,12 +1,10 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from pages_.cartPage import CartPage
 from pages_.loginPage import  LoginPage
 from pages_.navigationBar import  NavigationBar
-
 
 driver = webdriver.Chrome()
 driver.implicitly_wait(10)
@@ -24,7 +22,6 @@ loginPage.click_continue()
 loginPage.fill_password("hasiko07")
 loginPage.click_signin()
 
-
 navigationBar = NavigationBar(driver)
 navigationBar.click_cart_button()
 
@@ -38,4 +35,3 @@ first_product_delete_button_element.click()
 time.sleep(5)
 
 driver.close()
-
